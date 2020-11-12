@@ -1,4 +1,4 @@
-# Is COVID affecting some groups disproportionately?
+# Is COVID affecting some ethnic groups disproportionately?
 
 ## Motivation
 My main motivation of this project is to find any patterns that raise ethical and fairness questions in covid deaths.
@@ -60,3 +60,37 @@ Few ethical considerations that I would like to derive from here is to understan
 I have not yet validated the data quality and completeness. That is certainly something to look out for.
 I also need to validate if the columns on which to join the data are existing in both datasets otherwise I may miss out on some records in the join.
 Some of the population, unemployment and education data is available till year 2019. However, since these factors dont change drastically so often, I feel this will not be a blocking issue.
+
+## Research questions and hypothesis
+### Research question:
+Does being from a certain ethnicity, gender increase your risk of dying with covid?
+Does this risk vary based on your education level, employment status and area where you live?
+
+### Hypothesis:
+As we encounter the above questions, we will come across multiple scenarios where we will need statistically significant observations. We will use hypothesis testing for those.
+Example: Does being a black male from New york area increase your risk by x% compared to if you were from Seattle.
+
+## Background/Related work
+There has already been some research and data points shared by CDC which show that there is some evidence of disproportionate death rate across different ethnic groups and gender.
+Below is the related CDC website that has links to other resources
+https://www.cdc.gov/coronavirus/2019-ncov/community/health-equity/race-ethnicity.html
+
+The below two websites explores this in more details and shows a difference in death rates between various ethnic groups
+https://covidtracking.com/race
+https://covid.cdc.gov/covid-data-tracker/#demographics
+
+However, the question that these do not answer is - "How do other factors like economic conditions, education and unemployment affect the death rates?"
+
+## Methodology
+Below are the few steps that I plan to do
+
+### Data gathering and cleaning
+There are few datasets that I mentioned above that are important for my analysis. My first step is to make sure that all the data is collected, cleaned and available to be used for processing.
+This also includes finding any common keys that I can use to join by like the county ids etc
+
+### Exploratory data analysis
+After I have the data ready, the next step is to do exploratory data analysis on the data.
+This includes looking at various charts and doing a quick review to observe and see if there are some obvious patterns.
+I also plan to use some animations if required to see if some of the data changes with time.
+The next step is to validate the specific research questions that I have already mentioned in the Research questions section.
+As I explore the research questions, I may come across various hypothesis that may seem convincing but I want to go a step further and ensure that they are statistically sound and hence I will do some hypothesis testing. 
