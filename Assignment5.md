@@ -62,13 +62,22 @@ I also need to validate if the columns on which to join the data are existing in
 Some of the population, unemployment and education data is available till year 2019. However, since these factors dont change drastically so often, I feel this will not be a blocking issue.
 
 ## Research questions and hypothesis
-### Research question:
-Does being from a certain ethnicity, gender increase your risk of dying with covid?
-Does this risk vary based on your education level, employment status and area where you live?
+### Research questions:
+1. Does being from a certain ethnicity, gender increase your risk of dying with covid?
+#### Hypothesis
+The mean death rate for people with different ethnicities is same.
 
-### Hypothesis:
-As we encounter the above questions, we will come across multiple scenarios where we will need statistically significant observations. We will use hypothesis testing for those.
-Example: Does being a black male from New york area increase your risk by x% compared to if you were from Seattle.
+2. Does the risk of dying with covid increase based on whether you have a certain education level?
+#### Hypothesis
+The mean death rate for people with different education levels is same.
+
+3. Does the risk of dying with covid increase based on your economic/employment status?
+#### Hypothesis
+The mean death rate for people with different economic status/unemployed is same.
+
+4. Are counties in blue state doing better in avoiding deaths compared to red states?
+#### Hypothesis
+The mean death rate for blue states vs red states is same.
 
 ## Background/Related work
 There has already been some research and data points shared by CDC which show that there is some evidence of disproportionate death rate across different ethnic groups and gender.
