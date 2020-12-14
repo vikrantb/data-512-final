@@ -70,3 +70,5 @@ There are various different ways by which we can quantify the ill effects of COV
 
 
 Hence, I decided to study the death rates of COVID across various aspects like demographocs, unemployment, geographical area type and income ranges and observe if there are statistically significant differences in the mean death rates.
+
+Detailed report [here](https://github.com/vikrantb/data-512-final/blob/main/report.ipynb)
