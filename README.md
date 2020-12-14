@@ -1,21 +1,15 @@
-# Is COVID affecting some ethnic groups disproportionately?
+# Understanding the effects of COVID on the society in United States
 
 ## Motivation
-My main motivation of this project is to find any patterns that raise ethical and fairness questions in covid deaths.
+As SARS-CoV-2 is creating havoc in the world and affecting almost every country,the United States is currently the worst affected nation in the world. While it appears that everyone irrespective of their race and economic status is affected by the ill effects of the virus, I was curious to find out if that is true.
 
-I think this is important because this will help us provide more better facilities to the people who are more needy. This will also allow other interested researchers to dig in deeper and try to see if there are any inherent issues on why these patterns might exist.
-We currently do not have an understanding on the way covid deaths are distributed by ethnicity, race, gender, poverty and finally how do they vary based on where you live.
-My analysis hopes to present these in greater details. I am planning to do the analysis on county level data.
-I also hope to learn more about the data science process like data joining, cleaning and presenting them in the most understandable way.
+There are various different ways by which we can quantify the ill effects of COVID but the most obvious and severe effect is death.
 
+Hence, I decided to study the death rates of COVID across various aspects like demographocs, unemployment, geographical area type and income ranges and observe if there are statistically significant differences in the mean death rates.
 
-## Data selected for analysis
+Below are the datasets. All of them contain data at county level and all the data is available on public domain.
 
-There are 3 datasets that I am planning to join to do the analysis
-
-### Census data at county level
-
-#### Dataset uri
+#### Census data at county level
 
 https://www.census.gov/data/tables/time-series/demo/popest/2010s-counties-detail.html
 
@@ -23,83 +17,56 @@ Click on United States
 
 https://www2.census.gov/programs-surveys/popest/datasets/2010-2019/counties/asrh/cc-est2019-alldata.csv
 
-I am planning to use the census data by US government at county level. This contains the demographics information.
-Below is the way to extract the data
+This contains the demographics information.
 
 
-### Economic research data at county level
-
-#### Dataset URI
+#### Economic research data at county level
 
 https://www.ers.usda.gov/data-products/county-level-data-sets/
 
-Specifically, I am going to join with poverty, population and unemployment data
+The above dataset contains poverty and unemployment data. This has been downloaded in the `data/` folder for ease of analysis.
 
-### Covid deaths data
-
-I am planning to join the population, education and unemployment data with the covid deaths at county level.
-I may also join it separately or along with the same above join with demographic data.
-
-#### Dataset uri
+#### Covid deaths data
 
 https://data.cdc.gov/NCHS/Provisional-COVID-19-Death-Counts-by-County-and-Ra/k8wy-p9cg
 
-### License
-All the data is available on public domain.
+#### Information of social classes in United States
+https://en.wikipedia.org/wiki/Social_class_in_the_United_States#/media/File:Two_or_more_income_earners.png
 
-### Why this dataset is useful for ethical considerations?
 
-I would like to join the above datasets and observe patterns and dig more into the details.
+## Scientific Abstract
 
-This dataset is suitable for my analysis because this is firstly available on public domain and I do not need to worry about copyright issues. Also, this data is at appropriate granularity level. Too high level may not be very useful and too low level maybe difficult to decipher.
+### Background
+There has already been some research and data points shared by CDC which show that there is some evidence of disproportionate death rate across different ethnic groups and gender. Below is the related CDC website that has links to other resources
 
-Few ethical considerations that I would like to derive from here is to understand and confirm if there is really any racial and ethnic influencing factors in the covid related deaths. If it turns out that there are any patterns, I would like to do more in depth analysis to observe if these patterns are for any specific sub-category. Eg. poverty/population or education.
-
-## Unknowns and dependencies
-
-I have not yet validated the data quality and completeness. That is certainly something to look out for.
-I also need to validate if the columns on which to join the data are existing in both datasets otherwise I may miss out on some records in the join.
-Some of the population, unemployment and education data is available till year 2019. However, since these factors dont change drastically so often, I feel this will not be a blocking issue.
-
-## Research questions and hypothesis
-### Research questions:
-1. Does being from a certain ethnicity, gender increase your risk of dying with covid?
-#### Hypothesis
-The mean death rate for people with different ethnicities is same.
-
-2. Does the risk of dying with covid increase based on whether you have a certain education level?
-#### Hypothesis
-The mean death rate for people with different education levels is same.
-
-3. Does the risk of dying with covid increase based on your economic/employment status?
-#### Hypothesis
-The mean death rate for people with different economic status/unemployed is same.
-
-4. Are counties in blue state doing better in avoiding deaths compared to red states?
-#### Hypothesis
-The mean death rate for blue states vs red states is same.
-
-## Background/Related work
-There has already been some research and data points shared by CDC which show that there is some evidence of disproportionate death rate across different ethnic groups and gender.
-Below is the related CDC website that has links to other resources
 https://www.cdc.gov/coronavirus/2019-ncov/community/health-equity/race-ethnicity.html
 
 The below two websites explores this in more details and shows a difference in death rates between various ethnic groups
-https://covidtracking.com/race
-https://covid.cdc.gov/covid-data-tracker/#demographics
 
-However, the question that these do not answer is - "How do other factors like economic conditions, education and unemployment affect the death rates?"
+https://covidtracking.com/race https://covid.cdc.gov/covid-data-tracker/#demographics
 
-## Methodology
-Below are the few steps that I plan to do
+Some of the resources explore the topic at a very high level and provide conclusion without enough information for a future scientist to explore. While some provide more simplistic answers without diving deep into the details and studying interactions between different factors.
 
-### Data gathering and cleaning
-There are few datasets that I mentioned above that are important for my analysis. My first step is to make sure that all the data is collected, cleaned and available to be used for processing.
-This also includes finding any common keys that I can use to join by like the county ids etc
+Hence although the work is interesting to get started, I still feel a lot more needs to be done in this area.
 
-### Exploratory data analysis
-After I have the data ready, the next step is to do exploratory data analysis on the data.
-This includes looking at various charts and doing a quick review to observe and see if there are some obvious patterns.
-I also plan to use some animations if required to see if some of the data changes with time.
-The next step is to validate the specific research questions that I have already mentioned in the Research questions section.
-As I explore the research questions, I may come across various hypothesis that may seem convincing but I want to go a step further and ensure that they are statistically sound and hence I will do some hypothesis testing. 
+### Purpose
+
+The main purpose of this research is to answer and investigate the below questions
+
+Is the mean death rate of people dying with COVID in United States the same across different geographical area types?
+
+Is the mean death rate of people dying with COVID in United States the same across all income groups?
+
+Is the mean death rate of people dying with COVID in United States the same across all races?
+
+For each of these, we will do some basic EDA and then use relevant statistical tests to come up with conclusion. While answering the above questions, if we find interesting patterns, we will dive deep into each one of them. We might also be interested to study any interactions between these factors.
+
+
+#### Particular interest/focus of paper
+
+As SARS-CoV-2 is creating havoc in the world and affecting almost every country,the United States is currently the worst affected nation in the world. While it appears that everyone irrespective of their race and economic status is affected by the ill effects of the virus, I was curious to find out if that is true.
+
+There are various different ways by which we can quantify the ill effects of COVID but the most obvious and severe effect is death.
+
+
+Hence, I decided to study the death rates of COVID across various aspects like demographocs, unemployment, geographical area type and income ranges and observe if there are statistically significant differences in the mean death rates.
